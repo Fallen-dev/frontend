@@ -1,0 +1,42 @@
+$love: #eb6f92
+$muted: #6e6a86
+$base: #191724
+$iris: #c4a7e7
+
+
+.error
+  display: grid
+  place-items: center
+  height: 70vh
+  &--wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+  &--title
+    font-size: 6rem
+    line-height: 1rem
+    font-weight: 700
+    color: $love
+  &--text
+    margin-block: 4rem 1rem
+    font-weight: 500
+    color: $muted
+
+
+.btn
+  cursor: pointer
+  outline: none
+  padding: .5rem 1.5rem
+  width: 100%
+  border-radius: .25rem
+  font-size: 0.875rem
+  line-height: 1.25rem
+  font-weight: 700
+  text-transform: uppercase
+  border: 2px solid $iris
+  background: none
+  color: $iris
+  &:hover
+    background-color: $iris
+    color: $base
+

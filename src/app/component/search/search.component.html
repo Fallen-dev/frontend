@@ -1,0 +1,8 @@
+<app-title></app-title>
+<div class="form-control" (keyup.control.enter)="focusTo(input)">
+  <p class="label">Search an user by their GitHub username</p>
+
+  <input #input type="text" placeholder="{{placeholder}}" class="input" (keyup.enter)="gotoPage(input.value)" />
+
+  <button type="button" class="btn" (click)="gotoPage(input.value)">search</button>
+</div>

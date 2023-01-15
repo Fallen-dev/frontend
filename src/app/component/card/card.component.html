@@ -1,0 +1,18 @@
+<div *ngFor="let repo of repos" class="wrapper">
+  <div class="card">
+    <a class="card--name" href="{{repo['url']}}">{{repo['name']}}</a>
+    <div class="card--small-chip">
+      <p>{{repo['watchers']}} {{plural(repo['views'], 'view')}}</p>
+      <p>{{repo['forks']}} {{plural(repo['forks'], 'fork')}}</p>
+      <p>{{repo['open_issues']}} open {{plural(repo['open_issues'], 'issue')}}</p>
+    </div>
+    <p class="{{repo['description'] ? 'card--desciption' : 'hidden'}}">{{repo['description']}}</p>
+    <div class="{{repo['topics'][0] ? 'card--topics' : 'hidden'}}">
+      <span *ngFor="let topic of repo['topics']">{{topic}}</span>
+    </div>
+  </div>
+</div>
+
+<div class="loader {{loaded && 'hidden'}}">
+  <h1 class="loader--text">Fetching repo data...</h1>
+</div>

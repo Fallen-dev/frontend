@@ -1,0 +1,47 @@
+<div class="container {{loaded || 'hidden'}}">
+  <button class="icon" routerLink="/">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon--svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+    </svg>
+    <span>Go back</span>
+  </button>
+  <div class="user">
+    <div class="user--img-wrapper">
+      <img src="{{url}}" class="user--img" />
+    </div>
+    <div class="user--info">
+      <h4 class="user--name">{{name}}</h4>
+      <div class="mt-1 user--name-extra">
+        <p class="{{real_name || 'hidden'}}">{{real_name}}&nbsp;&nbsp;</p>
+        <div class="user--location">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+          </svg>
+          <p>{{location || 'Unknown'}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="follows">
+      <p>{{following}} following</p>
+      <p>{{followers}} {{plural(followers, 'follower')}}</p>
+      <p>{{repos}} {{plural(repos, 'repo')}}</p>
+  </div>
+
+  <p class="{{bio || 'hidden'}}">{{bio}}</p>
+
+  <div class="urls">
+    <a href="{{url}}">github.com/{{name}}</a>
+    <a href="https://twitter.com/{{twitter_username}}" target="_blank" class="{{twitter_username || 'hidden'}}">twitter.com/{{twitter_username}}</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <app-card></app-card>
+</div>
+
+<div class="loader {{loaded && 'hidden'}}">
+  <h1>Just a sec...</h1>
+</div>

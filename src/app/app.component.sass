@@ -1,0 +1,78 @@
+// Rose-pine theme https://rosepinetheme.com/palette
+$base: #191724
+$surface: #1f1d2e
+$overlay: #26233a
+$text: #e0def4
+$iris: #c4a7e7
+$foam: #9ccfd8
+$highlight: #21202e
+$highlight-med: #403d52
+$gold: #f6c177
+$love: #eb6f92
+$rose: #ebbcba
+
+$container-width: 24rem
+
+@mixin theme($bg, $fg)
+  background-color: $bg
+  color: $fg
+
+.wrapper
+  background-color: $overlay
+  display: grid
+  place-items: center
+
+
+.container
+  padding: 1.5rem
+
+.container > * + *
+  margin-top: .5rem
+
+.container-mobile
+  @include theme($base, $text)
+  width: $container-width
+  min-height: 100vh
+  padding: 0
+
+@media (max-width: 640px)
+  .container-mobile
+    min-width: 100%
+
+.relative
+  position: relative
+
+.nav
+  @include theme($surface, $text)
+  position: sticky
+  left: 0
+  top: 0
+  z-index: 99999
+  padding-inline: 1.5rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-bottom: 2px solid $highlight
+  &--title
+    text-decoration: none
+    background: none
+    font-weight: 700
+    color: $text
+    outline: none
+    border: none
+    cursor: pointer
+  &--icon
+    text-decoration: none
+    background: none
+    color: $text
+    outline: none
+    border: none
+    padding-block: 0.5rem
+    cursor: pointer
+    &--svg
+      margin-top: .25rem
+      width: 1.5rem
+      height: 1.5rem
+
+.hidden
+  opacity: 0
