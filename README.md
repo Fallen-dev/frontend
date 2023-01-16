@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
 
-#### The site is up and running at 
+#### The site is up and running at https://ngspa-frontend.cyclic.app
 
 ## Development server
 

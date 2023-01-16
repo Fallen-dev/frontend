@@ -12,10 +12,6 @@ const routes: Routes = [
     component: SearchComponent
   },
   {
-    path: '**',
-    component: ErrorComponent
-  },
-  {
     path: 'user',
     component: UserComponent
   },
